@@ -56,9 +56,9 @@
             filter: brightness(0.6) contrast(1.4);
         }
 
-        /* --- FOOTER: EMAIL FORM --- */
+        /* --- FOOTER CONTAINER (Form + Legal) --- */
         .footer {
-            margin-bottom: 8vh;
+            margin-bottom: 5vh;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -117,33 +117,56 @@
             color: var(--pitch-black);
         }
 
+        /* --- NEW LEGAL & CONTACT FOOTER --- */
+        .legal-footer {
+            margin-top: 35px;
+            text-align: center;
+            font-size: 0.65rem;
+            color: #444;
+            letter-spacing: 0.15em;
+            line-height: 1.8;
+        }
+        .legal-footer a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .legal-footer a:hover {
+            color: var(--cu-bronze);
+        }
+
         /* Mobile adjustments */
         @media (max-width: 600px) {
             .header-logo { max-width: 150px; }
             .coming-soon-text { font-size: 0.7rem; }
+            .legal-footer { font-size: 0.55rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <img src="header-logo.png" alt="FUSORI" class="header-logo">
+        <img src="header-logo.jpg" alt="FUSORI" class="header-logo">
     </div>
 
     <div class="hero">
-        <img src="shrouded-watch.png" alt="The Fusori Serpent" class="shrouded-watch">
+        <img src="shrouded-watch.jpg" alt="The Fusori Serpent" class="shrouded-watch">
     </div>
 
     <div class="footer">
-        <div class="coming-soon-text">FIRST EDITION • COMING SOON</div>
+        <div class="coming-soon-text">BATCH 001 • COMING SOON</div>
         
-                <form class="signup-form" name="Waitlist" method="POST" data-netlify="true">
+        <form class="signup-form" name="Waitlist" method="POST" data-netlify="true" netlify action="/">
             <input type="hidden" name="form-name" value="Waitlist">
             
             <input type="email" name="email" class="email-input" placeholder="ENTER EMAIL ADDRESS" required>
             <button type="submit" class="submit-btn">REQUEST INFORMATION</button>
         </form>
 
+        <div class="legal-footer">
+            &copy; 2026 FUSORI. ALL RIGHTS RESERVED.<br>
+            <a href="mailto:info@fusori.com">CONTACT: INFO@FUSORI.COM</a>
+        </div>
     </div>
 
 </body>
