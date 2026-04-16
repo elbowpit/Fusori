@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUSORI | Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden; /* Keeps everything locked on one screen */
+        }
+        
+        /* THE NASA STYLE HEADER */
+        .header {
+            margin-top: 6vh;
+        }
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            letter-spacing: 0.35em;
+            margin: 0;
+            color: #E0E0E0;
+            text-transform: uppercase;
+        }
+
+        /* THE SHROUDED WATCH CONTAINER */
+        .hero {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .shrouded-watch {
+            max-width: 85%;
+            max-height: 60vh;
+            object-fit: contain;
+            /* CO-FOUNDER TIP: If your image isn't dark enough, this CSS lowers the brightness natively */
+            filter: brightness(0.25) contrast(1.3); 
+        }
+
+        /* THE EMAIL CAPTURE FOOTER */
+        .footer {
+            margin-bottom: 8vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 350px;
+            padding: 0 20px;
+        }
+        .email-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #333;
+            color: #fff;
+            font-size: 1rem;
+            padding: 10px 5px;
+            margin-bottom: 25px;
+            text-align: center;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.15em;
+            transition: border-bottom 0.3s ease;
+        }
+        .email-input::placeholder {
+            color: #444;
+        }
+        .email-input:focus {
+            border-bottom: 1px solid #A8793F; /* Fusori Bronze accent */
+        }
+        .submit-btn {
+            background: transparent;
+            color: #A8793F;
+            border: 1px solid #A8793F;
+            padding: 14px 35px;
+            font-size: 0.85rem;
+            letter-spacing: 0.25em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+        }
+        .submit-btn:hover {
+            background: #A8793F;
+            color: #000;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            .logo { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1 class="logo">FUSORI</h1>
+    </div>
+
+    <div class="hero">
+        <img src="YOUR_IMAGE_FILE.png" alt="The Fusori Serpent" class="shrouded-watch">
+    </div>
+
+    <div class="footer">
+        <form class="signup-form" action="YOUR_EMAIL_SERVICE_LINK_HERE" method="POST">
+            <input type="email" class="email-input" placeholder="ENTER YOUR EMAIL" required>
+            <button type="submit" class="submit-btn">REQUEST ACCESS</button>
+        </form>
+    </div>
+
+</body>
+</html>
