@@ -18,13 +18,14 @@
             background-color: var(--pitch-black);
             color: var(--text-base);
             font-family: 'Inter', sans-serif;
-            /* Keeps the page locked to exactly one screen height, no scrolling */
-            height: 100vh;
+            /* Changed to min-height so it can expand if needed */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            overflow: hidden; 
+            /* Unlocked vertical scroll, but kept horizontal scroll locked */
+            overflow-x: hidden; 
         }
 
         /* --- HEADER --- */
@@ -47,12 +48,13 @@
             justify-content: center;
             align-items: center;
             width: 100%;
+            /* Added padding so it doesn't crowd the logo/footer when scrolling */
+            padding: 40px 0; 
         }
         .shrouded-watch {
             max-width: 85%;
             max-height: 55vh;
             object-fit: contain;
-            /* Pushes the watch deep into the shadows */
             filter: brightness(0.6) contrast(1.4);
         }
 
@@ -167,7 +169,6 @@
             &copy; 2026 FUSORI. ALL RIGHTS RESERVED.<br>
             <a href="mailto:info@fusori.com">CONTACT: INFO@FUSORI.COM</a>
         </div>
-        
     </div>
 
 </body>
